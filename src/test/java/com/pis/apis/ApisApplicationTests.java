@@ -1,10 +1,10 @@
-package com.pps.jobs;
+package com.pis.apis;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class JobsApplicationTests {
+class ApisApplicationTests {
 
 	@Test
 	void contextLoads() {
