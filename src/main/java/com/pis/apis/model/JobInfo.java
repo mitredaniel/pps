@@ -4,6 +4,7 @@ package com.pis.apis.model;
 
 import java.math.BigDecimal;
 import java.sql.Timestamp;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import lombok.Data;

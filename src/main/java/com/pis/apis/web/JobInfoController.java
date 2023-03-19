@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.pis.apis.model.Invoice;
 import com.pis.apis.model.JobInfo;
 import com.pis.apis.services.JobInfoServiceImpl;
 
@@ -16,17 +17,22 @@ import com.pis.apis.services.JobInfoServiceImpl;
 @RestController
 @RequestMapping("/jobInfo")
 public class JobInfoController {
-	
+
 	@Autowired
 	private JobInfoServiceImpl jobInfoService;
-	
+
 	@GetMapping("/{jobId}")
-	public List<JobInfo> getJobInfo(@PathVariable String jobId){
+	public List<JobInfo> getJobInfo(@PathVariable String jobId) {
 		return jobInfoService.getJobInfo(jobId);
 	}
-	
+
+	@GetMapping("/invoice/{jobId}")
+	public List<Invoice> getInvoiceItems(@PathVariable String jobId) {
+		return jobInfoService.getInvoiceItems(jobId);
+	}
+
 	@RequestMapping("/test")
-	public String getTest(){
+	public String getTest() {
 		return "tested successfully";
 	}
 
